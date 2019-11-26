@@ -2,10 +2,10 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">index</h1>
-      <NuxtLink to="/about">Go to about</NuxtLink>
+      <h1 class="title">about</h1>
+      <NuxtLink to="/">Go to home</NuxtLink>
       <div class="links">
-        <a href="about" target="_blank" class="button--green">Documentation</a>
+        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
         <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
       </div>
     </div>
