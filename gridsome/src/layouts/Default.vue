@@ -1,36 +1,33 @@
 <template>
   <div class="layout">
     <Header />
-    <slot />
+    <div class="body">
+      <slot />
+    </div>
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export default {
   components: {
     Header,
     Footer
   }
-};
+}
 </script>
 
-<style>
-body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
-}
-
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
 }
 </style>
