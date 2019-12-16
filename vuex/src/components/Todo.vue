@@ -16,6 +16,7 @@
 <script>
 import { mapState, mapMutations, mapActions } from 'vuex'
 export default {
+  name: 'Todo',
   data() {
     newTodo = ''
   },

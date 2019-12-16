@@ -8,11 +8,18 @@
         <button>Remove</button>
       </li>
     </ul>
+    <form @submit.prevent="addTodo">
+      <input placeholder="Add a Todo" />
+    </form>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'Todov2',
+  data() {
+    newTodo = { text: 'Todo 3', done: false }
+  },
   computed: {
     // future filters
     doneTodosCount() {
@@ -20,6 +27,11 @@ export default {
     },
     undoneTodosCount() {
       return this.$store.getters.undoneTodos.length
+    }
+  },
+  methods: {
+    addTodo() {
+      this.$store.commit('addtodo', this.newTodo)
     }
   }
 }

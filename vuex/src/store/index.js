@@ -27,6 +27,10 @@ const store = new Vuex.Store({
     ADD_TODO: (state, payload) => {
       console.log('chegou aqui')
       state.todos.push(payload)
+    },
+    addtodo(state, todo) {
+      console.log('state', state, 'todo', todo)
+      state.todos.push(todo)
     }
   },
   actions: {
