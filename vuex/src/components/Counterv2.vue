@@ -9,17 +9,17 @@
 <script>
 export default {
   name: 'Counterv2',
-  computed: {
-    counter() {
-      return this.$store.state.counter
-    }
-  },
   methods: {
     increment() {
       this.$store.commit('increment')
     },
     decrement() {
       this.$store.commit('decrement')
+    }
+  },
+  computed: {
+    counter() {
+      return this.$store.state.counter
     }
   }
 }
