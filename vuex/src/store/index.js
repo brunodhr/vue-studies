@@ -6,7 +6,10 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     counter: 0,
-    todos: ['teste1', 'teste2']
+    todos: [
+      { text: 'Todo 1', done: true },
+      { text: 'Todo 2', done: false }
+    ]
   },
   mutations: {
     increment(state) {
@@ -31,7 +34,15 @@ const store = new Vuex.Store({
       context.commit('REMOVE_TODO', todo)
     }
   },
-  modules: {}
+  modules: {},
+  getters: {
+    doneTodos: state => {
+      return state.todos.filter(todo => todo.done)
+    },
+    undoneTodos: state => {
+      return state.todos.filter(todo => !todo.done)
+    }
+  }
 })
 
 export default store
