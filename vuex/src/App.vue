@@ -1,17 +1,23 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <Counter msg="Welcome to Your Vue.js App" />
+    <!-- <Counter msg="Welcome to Your Vue.js App" /> -->
+    <Counterv2 />
+    <!-- <Todo /> -->
   </div>
 </template>
 
 <script>
 import Counter from './components/Counter.vue'
+import Counterv2 from './components/Counterv2.vue'
+import Todo from './components/Todo.vue'
 
 export default {
   name: 'app',
   components: {
-    Counter
+    // Counter,
+    // Todo
+    Counterv2
   }
 }
 </script>
