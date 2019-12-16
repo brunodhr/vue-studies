@@ -13,6 +13,7 @@ const store = new Vuex.Store({
   },
   mutations: {
     increment(state) {
+      console.log(3)
       state.counter++
     },
     decrement(state) {
@@ -34,6 +35,10 @@ const store = new Vuex.Store({
     }
   },
   actions: {
+    increment(context) {
+      console.log('2', context)
+      context.commit('increment')
+    },
     RM_TODO: (context, todo) => {
       context.commit('REMOVE_TODO', todo)
     }

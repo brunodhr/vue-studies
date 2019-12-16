@@ -11,7 +11,8 @@ export default {
   name: 'Counterv2',
   methods: {
     increment() {
-      this.$store.commit('increment')
+      console.log('1')
+      this.$store.dispatch('increment')
     },
     decrement() {
       this.$store.commit('decrement')
