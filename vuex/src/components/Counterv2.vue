@@ -7,23 +7,20 @@
 </template>
 
 <script>
-import store from '@/store'
-
 export default {
   name: 'Counterv2',
   computed: {
     counter() {
-      return store.state.counter
+      return this.$store.state.counter
     }
   },
+  mounted() {},
   methods: {
     increment() {
-      console.log('couint', this.counter)
-      store.commit('increment')
+      this.$store.commit('increment')
     },
     decrement() {
-      console.log('couint', this.counter)
-      store.commit('decrement')
+      this.$store.commit('decrement')
     }
   }
 }
