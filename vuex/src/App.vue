@@ -12,8 +12,11 @@ import Counter from './components/Counter.vue'
 import Counterv2 from './components/Counterv2.vue'
 import Todo from './components/Todo.vue'
 
+import store from '@/store'
+
 export default {
   name: 'app',
+  store,
   components: {
     // Counter,
     // Todo
