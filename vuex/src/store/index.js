@@ -39,6 +39,10 @@ const store = new Vuex.Store({
       console.log('2', context)
       context.commit('increment')
     },
+    decrement(context) {
+      console.log('2', context)
+      context.commit('decrement')
+    },
     RM_TODO: (context, todo) => {
       context.commit('REMOVE_TODO', todo)
     }
