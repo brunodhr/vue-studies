@@ -11,16 +11,15 @@ export default {
   name: 'Counterv2',
   methods: {
     increment() {
-      console.log('1')
       this.$store.dispatch('increment')
     },
     decrement() {
-      this.$store.commit('decrement')
+      this.$store.dispatch('decrement')
     }
   },
   computed: {
     counter() {
-      return this.$store.state.counter
+      return this.$store.state.a.counter
     }
   }
 }
