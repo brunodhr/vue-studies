@@ -2,9 +2,9 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <!-- <Counter /> -->
-    <Counterv2 />
+    <!-- <Counterv2 /> -->
     <!-- <Todo /> -->
-    <!-- <Todov2 /> -->
+    <Todov2 />
   </div>
 </template>
 
@@ -22,8 +22,8 @@ export default {
   components: {
     // Counter
     // Todo
-    Counterv2
-    // Todov2
+    // Counterv2
+    Todov2
   }
 }
 </script>

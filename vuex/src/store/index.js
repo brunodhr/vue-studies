@@ -27,7 +27,7 @@ const counter = {
 
 const todo = {
   state: {
-    todo: [
+    todos: [
       { text: 'Todo 1', done: true },
       { text: 'Todo 2', done: false }
     ]
