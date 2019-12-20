@@ -1,13 +1,15 @@
 <template>
   <div>
-    <h4>{{ this.$store.getters.done.length }} tarefa completa</h4>
+    <h4>{{ dones }} tarefa completa</h4>
     <ul>
-      <li v-for="(todo, index) in this.todos" :key="index">
+      <li v-for="(todo, index) in todos" :key="index">
         {{ todo.text }}
         <button>Remove</button>
       </li>
     </ul>
-    <form @submit.prevent="addTodo">
+    <form
+      @submit.prevent="$store.dispatch('add', { text: 'Todo 4', done: false })"
+    >
       <input placeholder="Add a Todo" />
     </form>
   </div>
@@ -18,7 +20,8 @@ export default {
   name: 'Todov2',
   data() {
     return {
-      todos: this.$store.state.b.todos
+      todos: this.$store.state.b.todos,
+      dones: this.$store.getters.done.length
     }
   }
 }
