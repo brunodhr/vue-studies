@@ -4,7 +4,7 @@
     <ul>
       <li v-for="(todo, index) in todos" :key="index">
         {{ todo.text }}
-        <button>Remove</button>
+        <button @click="rm(index)">Remove</button>
       </li>
     </ul>
     <form @submit.prevent="add(name)">
@@ -26,6 +26,9 @@ export default {
   methods: {
     add(text) {
       this.$store.dispatch('add', { text: text, done: false })
+    },
+    rm(index) {
+      this.$store.dispatch('rm', index)
     }
   }
 }
