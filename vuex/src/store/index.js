@@ -27,45 +27,32 @@ const counter = {
 
 const todo = {
   state: {
-    todo: []
-  },
-  mutations: {},
-  actions: {}
-}
-
-const store = new Vuex.Store({
-  state: {
-    todos: [
+    todo: [
       { text: 'Todo 1', done: true },
       { text: 'Todo 2', done: false }
     ]
   },
-  modules: {
-    a: counter,
-    b: todo
-  },
   mutations: {
-    ADD_TODO: (state, payload) => {
-      console.log('chegou aqui')
-      state.todos.push(payload)
-    },
-    addtodo(state, todo) {
-      console.log('state', state, 'todo', todo)
+    add(state, todo) {
       state.todos.push(todo)
     }
   },
   actions: {
-    RM_TODO: (context, todo) => {
-      context.commit('REMOVE_TODO', todo)
+    add(context, todo) {
+      context.commit('add', todo)
     }
   },
   getters: {
-    doneTodos: state => {
+    done: state => {
       return state.todos.filter(todo => todo.done)
-    },
-    undoneTodos: state => {
-      return state.todos.filter(todo => !todo.done)
     }
+  }
+}
+
+const store = new Vuex.Store({
+  modules: {
+    a: counter,
+    b: todo
   }
 })
 
