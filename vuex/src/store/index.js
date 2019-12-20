@@ -25,6 +25,14 @@ const counter = {
   }
 }
 
+const todo = {
+  state: {
+    todo: []
+  },
+  mutations: {},
+  actions: {}
+}
+
 const store = new Vuex.Store({
   state: {
     todos: [
@@ -33,7 +41,8 @@ const store = new Vuex.Store({
     ]
   },
   modules: {
-    a: counter
+    a: counter,
+    b: todo
   },
   mutations: {
     ADD_TODO: (state, payload) => {
