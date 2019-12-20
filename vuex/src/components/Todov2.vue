@@ -7,10 +7,8 @@
         <button>Remove</button>
       </li>
     </ul>
-    <form
-      @submit.prevent="$store.dispatch('add', { text: 'Todo 4', done: false })"
-    >
-      <input placeholder="Add a Todo" />
+    <form @submit.prevent="add(name)">
+      <input placeholder="Add a Todo" v-model="name" />
     </form>
   </div>
 </template>
@@ -21,7 +19,13 @@ export default {
   data() {
     return {
       todos: this.$store.state.b.todos,
-      dones: this.$store.getters.done.length
+      dones: this.$store.getters.done.length,
+      name: ''
+    }
+  },
+  methods: {
+    add(text) {
+      this.$store.dispatch('add', { text: text, done: false })
     }
   }
 }
