@@ -8,8 +8,8 @@ import todo from './todo'
 
 const store = new Vuex.Store({
   modules: {
-    a: counter,
-    b: todo
+    counter,
+    todo
   }
 })
 
