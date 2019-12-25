@@ -18,7 +18,7 @@ export default {
   name: 'Todov2',
   data() {
     return {
-      todos: this.$store.state.b.todos,
+      todos: this.$store.state.todo.todos,
       dones: this.$store.getters.done.length,
       name: ''
     }
