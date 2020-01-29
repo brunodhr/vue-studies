@@ -10,15 +10,15 @@
 </template>
 
 <script>
-import Logo from "~/components/Logo.vue";
-import Layout from "~/components/Layout.vue";
+import Logo from '~/components/Logo.vue'
+import Layout from '~/components/Layout.vue'
 
 export default {
   components: {
     Logo,
     Layout
   }
-};
+}
 </script>
 
 <style>
